@@ -18,7 +18,7 @@ function createNavbar()
     hamburger.id = 'hamburger_menu';
     hamburger.src = ham;
 
-    let home_btn = button('home_btn', '00', 'HOME', 'home.html');
+    let home_btn = button('home_btn', '00', 'HOME', 'index.html');
     let destination_btn = button('destination_btn', '01', 'DESTINATION', 'destination.html');
     let crew_btn = button('crew_btn', '02',  'CREW', 'crew.html');
     let technology_btn = button('technology_btn', '03', 'TECHNOLOGY', 'technology.html');
