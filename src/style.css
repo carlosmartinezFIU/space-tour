@@ -1194,9 +1194,9 @@ body{
     }
 
     .destination_title_container{
-        position: fixed;
+        position: relative;
         width: 100%;
-        top: 96px;
+        top: 14px;
     }
 
     #main_container_tech{
