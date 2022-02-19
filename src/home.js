@@ -63,7 +63,7 @@ function loadHome(){
 
 
     const getHamburger = document.getElementById('hamburger_menu');
-    getHamburger.addEventListener("click", function()
+    getHamburger.onclick(function()
     {
         createMobileBar("home_container", "description_container");
         alert("Hello");
