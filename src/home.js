@@ -1,14 +1,18 @@
 import style from './style.css';
-import createNavbar from "./navbar";
+import {createNavbar, mobileBar, createMobileBar, closeMenu} from "./navbar";
 
 function createHome(){
 
     const getNavbar = createNavbar();
+    const getMobile = mobileBar();
+
     const homeContainer = document.createElement('div');
     homeContainer.classList.add('home_container');
+    homeContainer.id = 'home_container';
 
     const descriptionContainer = document.createElement('div');
     descriptionContainer.classList.add('description_container');
+    descriptionContainer.id = 'description_container';
 
     const descriptionContent = document.createElement('div');
     descriptionContent.classList.add('description_content');
@@ -36,7 +40,7 @@ function createHome(){
 
     descriptionContainer.append(descriptionContent, exploreLogo);
 
-    homeContainer.append(getNavbar, descriptionContainer);
+    homeContainer.append(getNavbar, getMobile, descriptionContainer);
 /** 
     const getContent = document.getElementById('content');
     getContent.append(homeContainer);
@@ -57,7 +61,19 @@ function loadHome(){
     console.log("tetsing");
     getContent.append(finishHome);
 
+
+    const getHamburger = document.getElementById('hamburger_menu');
+    getHamburger.addEventListener("click", function()
+    {
+        createMobileBar("home_container", "description_container");
+    });
+
+    const getCloseBtn = document.getElementById('close_btn');
+    getCloseBtn.onclick = closeMenu;
+
 }
+
+
 
 export default loadHome;
 

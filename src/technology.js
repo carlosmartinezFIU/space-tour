@@ -1,4 +1,4 @@
-import createNavbar from "./navbar";
+import {createNavbar, mobileBar, createMobileBar, closeMenu} from "./navbar";
 import style from './style.css';
 import shuttle from './asset/technology/image-launch-vehicle-portrait.jpg';
 import capsule from './asset/technology/image-space-capsule-portrait.jpg';
@@ -7,12 +7,13 @@ import backgroundLogo from './asset/technology/background-technology-desktop.jpg
 
 function createTech(){
     const getNavbar = createNavbar();
+    const getMobile = mobileBar();
 
     const techContainer = document.createElement('div');
     techContainer.id = 'tech_container';
     
     let createdTitle = titleContainer();
-    techContainer.append(getNavbar, createdTitle);
+    techContainer.append(getNavbar, getMobile, createdTitle);
 
     const mainContainer = document.createElement('div');
     mainContainer.id = 'main_container_tech';
@@ -68,6 +69,7 @@ function titleContainer(){
     
     let titleContainer = document.createElement('div');
     titleContainer.classList.add('destination_title_container');
+    titleContainer.id = "destination_title_container";
     
     let titleNum = document.createElement('p');
     titleNum.classList.add('number_title-01');
@@ -98,6 +100,16 @@ function loadTech(){
     const finishedTech = createTech();
 
     getTech.append(finishedTech);
+
+
+    const getHamburger = document.getElementById('hamburger_menu');
+    getHamburger.addEventListener("click", function()
+    {
+        createMobileBar("tech_container", "destination_title_container");
+    });
+
+    const getCloseBtn = document.getElementById('close_btn');
+    getCloseBtn.onclick = closeMenu;
     panelSelector();
 }
 
@@ -201,6 +213,7 @@ function panelSelector(){
     const three = document.getElementById('tech_btn_three');
     three.addEventListener('click', panelCapsule);
 }
+
 
 
 loadTech();

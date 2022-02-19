@@ -28,6 +28,14 @@ body{
     width: 100%;
 }
 
+#crew_mobile_navbar{
+    display: none;
+}
+
+#mobile_navbar_container #mobile_nav_buttons_container{
+    display: none;
+}
+
 .home_page{
     background-image: url('./asset/home/background-home-desktop.jpg');
     background-repeat: no-repeat;
@@ -88,9 +96,11 @@ body{
 
 .nav_buttons_container{
     display: flex;
-    
+    background-color: #ffffff10;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     width: 830px;
-    box-shadow: inset 0 0 2000px rgba(255, 255, 255, .4);
+    /**box-shadow: inset 0 0 2000px rgba(255, 255, 255, .4);  */
     
 }
 
@@ -206,6 +216,7 @@ body{
 
 .main_container{
     height: auto;
+    width: 100%;
 }
 
 .destination_title_container{
@@ -353,6 +364,7 @@ body{
 
 .content_wrapper{
     height: auto;
+    width: 100%;
 }
 
 .crew_title_container{
@@ -437,6 +449,10 @@ body{
     cursor: pointer;
 }
 .button_slider_container button:focus{
+    background: #fff;
+}
+
+#btn_one :focus{
     background: #fff;
 }
 
@@ -664,7 +680,7 @@ body{
           width: 100%;
           margin-top: 0;
           display: flex;
-          justify-content: right;
+          justify-content: flex-end;
       }  
       .nav_buttons_container{
           width: 450px;
@@ -799,7 +815,7 @@ body{
       }
 
       #person_logo_container{
-          height: 487px;
+          height: 349px;
           margin: auto;
           position: fixed;
           bottom: 0;
@@ -807,8 +823,8 @@ body{
       }
 
       #person_logo{
-          width: 300px;
-          height: 400px;
+          width: 312px;
+          height: 338px;
           position: fixed;
           bottom: 0;
           left: 34%;
@@ -933,7 +949,7 @@ body{
       .crew_content_container{
           width: auto;
           margin: auto;
-          margin-top: ;
+          margin-top: 14px;
           display: flex;
           flex-direction: column;
           align-items: center;
@@ -949,7 +965,6 @@ body{
           line-height: 28px;
           text-align: center;
       }
-
 
 }
 
@@ -999,6 +1014,7 @@ body{
         position: absolute;
         right: 0;
         margin: 2rem 3rem 0 0;
+        cursor: pointer;
     }
 
     #logo{
@@ -1082,9 +1098,62 @@ body{
         object-fit: cover;
     }
 
+
+    /****** Navbar *************************************/
+
+    #close_btn{
+        width: 25px;
+        position: absolute;
+        right: 35px;
+        top: 25px;
+        filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(298deg) brightness(109%) contrast(101%);
+    }
+
+    #mobile_nav_buttons_container{
+        position: absolute;
+        right: 0px;
+        height: 87.9%;
+        box-shadow: 1.3rem 1.3rem 1.3rem rgbs(249,249,249,0.82);
+        width: 280px;
+        z-index: 1;
+        flex-direction: column;
+        align-items: flex-start;
+        background: rgba(255,255,255,0.7);
+    }
+    #mobile_nav_buttons_container a{
+        background-color: transparent;
+        border: none;
+        color: black;
+        font-size: 18px;
+        font-family: var(--font-one);
+        letter-spacing: 2.7px;
+        cursor: pointer;
+        height: 55px;
+        text-decoration: none;
+        display: flex;
+        flex-direction: row;
+        display: block;
+    }
+    #home_btn{
+        margin: 0;
+        margin-top: 60px;
+    }
+
+
+
+
+
+
+
+
+
+
+    /****** Navbar *************************************/
+
     #logo{
         width: 40px;
         height: 40px;
+        top: 0px;
     }
 
     .description_content{
@@ -1106,10 +1175,41 @@ body{
 
     /** Destination Mobile   ****************************/
 
+    .mobile_look
+    {
+        top: 96px;
+        position: fixed;
+    }
+
+    .destination_mobile_container{
+        position: fixed;
+        top: 96px;
+    }
+    
+    .content_wrapper{
+        top: 96px;
+        position: fixed;
+    }
+
+    .destination_title_container{
+        position: fixed;
+        width: 100%;
+        top: 96px;
+    }
+
+    #main_container_tech{
+        position: fixed;
+        top: 108px;
+    }
+
+    
+
+
+
+
     .destination_title_container{
         margin: auto;
         margin-top: 55px;
-        width: auto;
         text-align: center;
         margin-top: 0px;
         justify-content: center;

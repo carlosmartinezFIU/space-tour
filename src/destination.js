@@ -1,4 +1,4 @@
-import createNavbar from "./navbar";
+import {createNavbar, mobileBar, createMobileBar, closeMenu} from "./navbar";
 import moonLogo from './asset/destination/image-moon.png';
 import marsLogo from './asset/destination/image-mars.png';
 import europaLogo from './asset/destination/image-europa.png';
@@ -8,10 +8,12 @@ import style from './style.css';
 
 function createDestination(){
     const getNavbar = createNavbar();
+    const getMobile = mobileBar();
 
 /************* Creating page container *****************/
     const destinationContainer = document.createElement('div');
     destinationContainer.classList.add('destination_container');
+    destinationContainer.id = "destination_container";
 /************* Creating page container *****************/
 
 
@@ -37,6 +39,7 @@ function createDestination(){
 /***********        Main Container     *************/
     const mainContentContainer = document.createElement('div');
     mainContentContainer.classList.add('main_container');
+    mainContentContainer.id = "main_container";
 
                      /** moon */
     let moonContainer = document.createElement('div');
@@ -125,7 +128,7 @@ function createDestination(){
 
     mainContentContainer.append(titleContainer,moonAndContentContainer);
 
-    destinationContainer.append(getNavbar, mainContentContainer);
+    destinationContainer.append(getNavbar, getMobile, mainContentContainer);
 
     return destinationContainer;
 
@@ -149,6 +152,15 @@ function loadDestination(){
     console.log('loading destination');
     
     desty.append(finishedDestination);
+
+    const getHamburger = document.getElementById('hamburger_menu');
+    getHamburger.addEventListener("click", function()
+    {
+        createMobileBar("destination_container", "main_container");
+    });
+
+    const getCloseBtn = document.getElementById('close_btn');
+    getCloseBtn.onclick = closeMenu;
 
     panelSelector();
 
@@ -343,7 +355,6 @@ function panelSelector(){
     const moon = document.getElementById('moon_btn');
     moon.addEventListener('click', moonTab);
 }
-
 
 
 export default loadDestination;

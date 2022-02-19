@@ -1,5 +1,5 @@
 import style from './style.css';
-import createNavbar from './navbar';
+import {createNavbar, mobileBar, createMobileBar, closeMenu} from "./navbar";
 import douglas from './asset/crew/image-douglas-hurley.png';
 import mark from './asset/crew/image-mark-shuttleworth.png';
 import victor from './asset/crew/image-victor-glover.png';
@@ -11,8 +11,9 @@ function createCrew(){
     crewContainer.id = 'crew_container';
 
     const getNavbar = createNavbar();
+    const getMobile = mobileBar();
 
-    crewContainer.append(getNavbar);
+    crewContainer.append(getNavbar, getMobile);
 
     let titleContainer = document.createElement('div');
     titleContainer.classList.add('crew_title_container');
@@ -93,6 +94,17 @@ function loadCrew(){
     const getCrew = document.getElementById('crew');
     
     getCrew.append(crew);
+
+    const getHamburger = document.getElementById('hamburger_menu');
+    getHamburger.addEventListener("click", function()
+    {
+        createMobileBar("crew_container", "content_wrapper");
+    });
+
+    const getCloseBtn = document.getElementById('close_btn');
+    getCloseBtn.onclick = closeMenu;
+
+
     panelSelector();
 }
 
