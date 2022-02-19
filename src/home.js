@@ -62,12 +62,10 @@ function loadHome(){
     getContent.append(finishHome);
 
 
-    const getHamburgerAnchor = document.getElementById('hamburger_anchor');
-    if(getHamburgerAnchor)
-    {
-        console.log("its true !!!!!!!!!");
-        getHamburgerAnchor.onclick = function(){ createMobileBar("home_container", "description_container")};
-    }
+    const getHamburger = document.getElementById('hamburger_menu');
+    getHamburger.addEventListener("click", function(){
+        createMobileBar("home_container", "description_container")
+    });
 
     const getCloseBtn = document.getElementById('close_btn');
     getCloseBtn.onclick = closeMenu;

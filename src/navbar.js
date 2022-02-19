@@ -15,14 +15,14 @@ export function createNavbar()
     logo1.id = 'logo';
     logo1.src = logo;
 
-    let hamburgerAnchor = document.createElement('a');
-    hamburgerAnchor.id = "hamburger_anchor";
+    /* let hamburgerAnchor = document.createElement('a');
+    hamburgerAnchor.id = "hamburger_anchor"; */
 
     let hamburger = document.createElement('img');
     hamburger.id = 'hamburger_menu';
     hamburger.src = ham;
 
-    hamburgerAnchor.append(hamburger);
+    /*hamburgerAnchor.append(hamburger);  */
 
 
     let home_btn = button('home_btn', '00', 'HOME', 'index.html');
@@ -31,7 +31,7 @@ export function createNavbar()
     let technology_btn = button('technology_btn', '03', 'TECHNOLOGY', 'technology.html');
 
     navButtonsContainer.append(home_btn, destination_btn, crew_btn, technology_btn);
-    navbarContainer.append(logo1, navButtonsContainer, hamburgerAnchor);
+    navbarContainer.append(logo1, navButtonsContainer, hamburger);
 
     
     /**hamburger.addEventListener('click', createMobileBar);*/

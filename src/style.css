@@ -1012,6 +1012,11 @@ body{
         display: block;
         width: 28px;
         height: 26px;
+        width: 28px;
+        height: 26px;
+        position: absolute;
+        right: 0;
+        margin: 2rem 3rem 0 0;
     }
 
     #logo{
@@ -1057,14 +1062,6 @@ body{
 
 
 @media screen and (max-width: 460px){
-
-    #hamburger_anchor{
-        width: 28px;
-        height: 26px;
-        position: absolute;
-        right: 0;
-        margin: 2rem 3rem 0 0;
-    }
 
     .home_page{
         width: 100%;
