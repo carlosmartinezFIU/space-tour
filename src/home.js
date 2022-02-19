@@ -63,55 +63,16 @@ function loadHome(){
 
 
     const getHamburger = document.getElementById('hamburger_menu');
-    getHamburger.onclick = function(){
-        createMobileBar('home_container', 'description_container');
-    }
+    getHamburger.setAttribute("onclick", createMobileBar("home_container","description_container"));
+    getHamburger.setAttribute("onclick", "createMobileBar(home_container,description_container)");
+    getHamburger.setAttribute("onclick", "createMobileBar("home_container","description_container")");
 
     const getCloseBtn = document.getElementById('close_btn');
     getCloseBtn.onclick = closeMenu;
 
 }
 
-function createMobileBar(homeContainer, contentContainerMobile){
-    const mobile = document.getElementById('mobile_nav_buttons_container');
 
-    let getMain = document.getElementById(homeContainer);
-    const getMobileNavbar = document.getElementById('navbar_container');
-    const getLogo = document.getElementById('logo');
-
-    getMobileNavbar.style.display = "none";
-    getMain.append(getLogo);
-
-    console.log("this is main " + getMain);
-    mobile.style.display = "flex";
-
-    let getDescriptionContainer = document.getElementById(contentContainerMobile);
-    if(getDescriptionContainer.id == 'description_container')
-    {
-        getDescriptionContainer.classList.add('mobile_look');
-    }
-    else if(getDescriptionContainer.id == "main_container")
-    {
-        getDescriptionContainer.classList.add('destination_mobile_container');
-    }
-    else 
-        return;
-    
-}
-
-function closeMenu(){
-    const getHamburger = document.getElementById('hamburger_menu');
-    getHamburger.style.display = 'block';
-
-    const getLogo = document.getElementById('logo');
-    const getMobileNavbar = document.getElementById('navbar_container');
-    getMobileNavbar.style.display = 'flex';
-    getMobileNavbar.append(getLogo);
-
-    const mobile = document.getElementById('mobile_nav_buttons_container');
-    mobile.style.display = 'none';
-
-}
 
 
 
