@@ -18,6 +18,7 @@ export function createNavbar()
     let hamburger = document.createElement('img');
     hamburger.id = 'hamburger_menu';
     hamburger.src = ham;
+    hamburger.onclick = createMobileBar();
 
 
     let home_btn = button('home_btn', '00', 'HOME', 'index.html');
