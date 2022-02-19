@@ -64,7 +64,7 @@ function loadHome(){
 
     const getHamburger = document.getElementById('hamburger_menu');
     getHamburger.setAttribute("onclick", createMobileBar("home_container","description_container"));
-    getHamburger.setAttribute("onclick", "createMobileBar(home_container,description_container)");
+    getHamburger.setAttribute("onclick",function(){ "createMobileBar(home_container,description_container)"});
 
     const getCloseBtn = document.getElementById('close_btn');
     getCloseBtn.onclick = closeMenu;
