@@ -66,6 +66,7 @@ function loadHome(){
     getHamburger.addEventListener("click", function()
     {
         createMobileBar("home_container", "description_container");
+        alert("Hello");
     });
 
     const getCloseBtn = document.getElementById('close_btn');
