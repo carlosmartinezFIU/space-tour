@@ -523,7 +523,8 @@ body{
     border: grey 1px solid;
 }
 
-.tech_button_container button:focus{
+.tech_button_container .active_tech_btn{
+    background-color: white;
     background: #fff;
     color: black;
 }
@@ -1189,8 +1190,8 @@ body{
     }
     
     .content_wrapper{
-        top: 96px;
-        position: fixed;
+        top: 39px;
+        position: relative;
     }
 
     .destination_title_container{
@@ -1200,8 +1201,8 @@ body{
     }
 
     #main_container_tech{
-        position: fixed;
-        top: 108px;
+        position: relative;
+        top: 31px;
     }
 
     
@@ -1309,6 +1310,8 @@ body{
         display: flex;
         justify-content: center;
         width: 100%;
+        margin-top: 25px;
+        margin-bottom: 0px;
     }
 
     .middle_content_wrapper{
@@ -1323,6 +1326,7 @@ body{
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin-bottom: 0px;
     }
 
     #top_job_position{
@@ -1399,6 +1403,11 @@ body{
         width: 40px;
         height: 40px;
         font-size: 16px;
+    }
+
+    .tech_button_container button:focus{
+        background: #fff;
+        color: black;
     }
 
     #content_container{
