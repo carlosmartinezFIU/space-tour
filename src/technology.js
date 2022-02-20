@@ -170,6 +170,16 @@ function panelPort(){
         getBtn.id = 'not_active_btn';
     }
 
+    let getBtnThree = document.getElementById('tech_btn_three');
+    getBtnThree.classList.remove("active_tech_btn");
+
+    let getBtnTwo = document.getElementById('tech_btn_two');
+    if(getBtnTwo)
+    {
+        getBtnTwo.classList.add("active_tech_btn");
+    }
+
+
     getLogo.append(secondImg);
 }
 
@@ -198,6 +208,12 @@ function panelCapsule(){
     if(getBtn = document.getElementById('tech_btn_one')){
         getBtn.id = 'not_active_btn';
     }
+
+    let getBtnTwo = document.getElementById('tech_btn_two');
+    getBtnTwo.classList.remove("active_tech_btn");
+
+    let getBtnThree = document.getElementById('tech_btn_three');
+    getBtnThree.classList.add("active_tech_btn");
 
 
     getLogo.append(thirdImg);
