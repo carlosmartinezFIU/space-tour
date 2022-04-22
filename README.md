@@ -28,7 +28,6 @@ Tools Used:
 
 Some Challanges I overcame duting this Website Creation were the responsiveness as well as Module sharing within the Src and Dist Folder.
 
-  - [Links](#links)
   - Live Website is hosted on https https://carlosmartinezfiu.github.io/space-tour/
 
 
@@ -36,5 +35,8 @@ Some Challanges I overcame duting this Website Creation were the responsiveness 
     During this challenge some things i have added to my skills was the setup of Webpack. In short Webpack is a module bundler mainly used for javascript.
   
 
-- [Author](#author)
-- Carlos Martinez Cortes
+- [Author](#Carlos Martinz-Cortes)
+
+![space-web](space-web.png)
+
+![mobile-space](mobile-space.png)
